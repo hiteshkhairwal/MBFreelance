@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+    <link
+      rel="icon"
+      href="images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./lib/bootstrap.js"
+    ></script>
+    <title>Dashboard</title>
+  </head>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid header-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" id="header-logo" alt="Image here" />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                My Account <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <!-- <form name="logout_form" action="app" method="post" > -->
+                  <!-- <input type="hidden" name="action" value="logout"> -->
+                  <!--
+                    <button class="link-button" type="submit">Log Out</button>
+                  -->
+                  <a href="LogIn.html">Log Out</a>
+                  <!-- </form> -->
+                </li>
+              </ul>
+            </li>
+            <li><a href="howitworks.html">How it works?</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <body>
+    <!-- <div class="step-progress">
+      <div class="step-progress-box">
+        <div class="row">
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill done"> <i class="fas fa-check"></i> </span>
+              <span class="step-text"> Get Subscription </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill done"> <i class="fas fa-check"></i> </span>
+              <span class="step-text"> Terms & Conditions </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill done"> <i class="fas fa-check"></i> </span>
+              <span class="step-text"> Upload Data </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group active">
+              <span class="step-pill"> 4 </span>
+              <span class="step-text"> Dashboard </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="dashboard-container">
+      <div class="row">
+        <div class="col-md-2 col-xs-12 " >
+          <div class="side-panel">
+              <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation"><a href="#"><i class="far fa-list-alt"></i>&nbsp; Uploaded Files <span class="badge">05</span></a></li>
+                  <li role="presentation"><a href="#"><i class="far fa-list-alt"></i>&nbsp; Projection Files<span class="badge">08</span></a></li>
+                  <li role="presentation"><a href="#"><i class="fas fa-briefcase"></i>&nbsp; My Result</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-md-10 col-xs-12" >
+            <div class="dashboard-content">
+                <!-- <i id="successful-upload" class="far fa-check-circle"></i> -->
+                <h2>Our Products</h2>
+                <!-- <div class="help-text text-center  text-secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div> -->
+                <div class="row projection-table">
+                  <div class="col-md-9 col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1"
+                            ><i class="fas fa-search"></i
+                          ></span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search products"
+                            aria-describedby="basic-addon1"
+                          />
+                        </div>                          
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="pull-left paginator">
+                        Showing <strong> 01 - 10 </strong> of <strong> 450 </strong> results
+                        </div>
+                        <div class="pull-right">
+                          <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">
+                              <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="btn btn-default">
+                              <i class="fas fa-chevron-right"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <span style="clear:both" ></span>
+                      </div>
+                    </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <col width="60%" >
+                              <col width="20%" >
+                              <col width="20%" >
+                              <thead class="table-header">
+                                <tr>
+                                  <th  class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Name</th>
+                                  <th class="text-center">Projected <br> Monthly Quantity</th>
+                                  <th class="text-center">Our Price (&#8377;)</th>
+                                </tr>
+                              </thead>
+                                <tbody>
+                                  <tbody data-toggle="collapse" data-target="#1">
+                                    <tr class="toggle-row">
+                                      <td >
+                                          <span class="category-name">
+                                           &nbsp; <i style="font-size:20px;" class="fas fa-angle-down"></i>&nbsp; Suture India &nbsp; <span class="badge">04</span> <br>
+                                          </span>
+                                      </td>
+                                      <td align="center">
+                                        <strong class="text-primary">27</strong>
+                                      </td>
+                                      <td class="text-center">88.44</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody id="1" class="collapse">
+                                    <tr>
+                                          <td>
+                                            <span class="product-name">
+                                                <div class="pretty p-default" id="pretty-scale-test">
+                                                    <input type="checkbox" />
+                                                    <div class="state p-primary">
+                                                        <label>&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                Foley cather 2 way 6fr -suture india
+                                              </span>
+                                            </td>
+                                            <td align="center">
+                                                <input
+                                                min="0"
+                                                  value="20"
+                                                  type="number"
+                                                  class="product-quantity"
+                                                />
+                                              </td>
+                                              <td class="text-center">88.44</td>
+                                    </tr>
+                                    <tr>
+                                          <td>
+                                            <span class="product-name">
+                                                <div class="pretty p-default" id="pretty-scale-test">
+                                                    <input type="checkbox" />
+                                                    <div class="state p-primary">
+                                                        <label>&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                Foley cather 2 way 6fr -suture india
+                                              </span>
+                                            </td>
+                                            <td align="center">
+                                                <input
+                                                min="0"
+                                                  value="20"
+                                                  type="number"
+                                                  class="product-quantity"
+                                                />
+                                              </td>
+                                              <td class="text-center">88.44</td>
+                                    </tr>
+                                    <tr>
+                                          <td>
+                                            <span class="product-name">
+                                                <div class="pretty p-default" id="pretty-scale-test">
+                                                    <input type="checkbox" />
+                                                    <div class="state p-primary">
+                                                        <label>&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                Foley cather 2 way 6fr -suture india
+                                              </span>
+                                            </td>
+                                            <td align="center">
+                                                <input
+                                                min="0"
+                                                  value="20"
+                                                  type="number"
+                                                  class="product-quantity"
+                                                />
+                                              </td>
+                                              <td class="text-center">88.44</td>
+                                    </tr>
+                                    <tr>
+                                          <td>
+                                            <span class="product-name">
+                                                <div class="pretty p-default" id="pretty-scale-test">
+                                                    <input type="checkbox" />
+                                                    <div class="state p-primary">
+                                                        <label>&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                Foley cather 2 way 6fr -suture india
+                                              </span>
+                                            </td>
+                                            <td align="center">
+                                                <input
+                                                min="0"
+                                                  value="20"
+                                                  type="number"
+                                                  class="product-quantity"
+                                                />
+                                              </td>
+                                              <td class="text-center">88.44</td>
+                                    </tr>
+
+                                  </tbody>
+                                </tbody>
+                                <tbody>
+                                    <tbody data-toggle="collapse" data-target="#2">
+                                      <tr class="toggle-row">
+                                        <td >
+                                            <span class="category-name">
+                                             &nbsp; <i style="font-size:20px;" class="fas fa-angle-down"></i>&nbsp; Suture India &nbsp; <span class="badge">04</span> <br>
+                                            </span>
+                                        </td>
+                                        <td align="center">
+                                          <strong class="text-primary">27</strong>
+                                        </td>
+                                        <td class="text-center">88.44</td>
+                                      </tr>
+                                    </tbody>
+                                    <tbody id="2" class="collapse">
+                                      <tr>
+                                            <td>
+                                              <span class="product-name">
+                                                  <div class="pretty p-default" id="pretty-scale-test">
+                                                      <input type="checkbox" />
+                                                      <div class="state p-primary">
+                                                          <label>&nbsp;</label>
+                                                      </div>
+                                                  </div>
+                                                  Foley cather 2 way 6fr -suture india
+                                                </span>
+                                              </td>
+                                              <td align="center">
+                                                  <input
+                                                  min="0"
+                                                    value="20"
+                                                    type="number"
+                                                    class="product-quantity"
+                                                  />
+                                                </td>
+                                                <td class="text-center">88.44</td>
+                                      </tr>
+                                      <tr>
+                                            <td>
+                                              <span class="product-name">
+                                                  <div class="pretty p-default" id="pretty-scale-test">
+                                                      <input type="checkbox" />
+                                                      <div class="state p-primary">
+                                                          <label>&nbsp;</label>
+                                                      </div>
+                                                  </div>
+                                                  Foley cather 2 way 6fr -suture india
+                                                </span>
+                                              </td>
+                                              <td align="center">
+                                                  <input
+                                                  min="0"
+                                                    value="20"
+                                                    type="number"
+                                                    class="product-quantity"
+                                                  />
+                                                </td>
+                                                <td class="text-center">88.44</td>
+                                      </tr>
+                                      <tr>
+                                            <td>
+                                              <span class="product-name">
+                                                  <div class="pretty p-default" id="pretty-scale-test">
+                                                      <input type="checkbox" />
+                                                      <div class="state p-primary">
+                                                          <label>&nbsp;</label>
+                                                      </div>
+                                                  </div>
+                                                  Foley cather 2 way 6fr -suture india
+                                                </span>
+                                              </td>
+                                              <td align="center">
+                                                  <input
+                                                  min="0"
+                                                    value="20"
+                                                    type="number"
+                                                    class="product-quantity"
+                                                  />
+                                                </td>
+                                                <td class="text-center">88.44</td>
+                                      </tr>
+                                      <tr>
+                                            <td>
+                                              <span class="product-name">
+                                                  <div class="pretty p-default" id="pretty-scale-test">
+                                                      <input type="checkbox" />
+                                                      <div class="state p-primary">
+                                                          <label>&nbsp;</label>
+                                                      </div>
+                                                  </div>
+                                                  Foley cather 2 way 6fr -suture india
+                                                </span>
+                                              </td>
+                                              <td align="center">
+                                                  <input
+                                                  min="0"
+                                                    value="20"
+                                                    type="number"
+                                                    class="product-quantity"
+                                                  />
+                                                </td>
+                                                <td class="text-center">88.44</td>
+                                      </tr>
+  
+                                    </tbody>
+                                  </tbody>
+                                  <tbody>
+                                      <tbody data-toggle="collapse" data-target="#3">
+                                        <tr class="toggle-row">
+                                          <td >
+                                              <span class="category-name">
+                                               &nbsp; <i style="font-size:20px;" class="fas fa-angle-down"></i>&nbsp; Suture India &nbsp; <span class="badge">04</span> <br>
+                                              </span>
+                                          </td>
+                                          <td align="center">
+                                            <strong class="text-primary">27</strong>
+                                          </td>
+                                          <td class="text-center">88.44</td>
+                                        </tr>
+                                      </tbody>
+                                      <tbody id="3" class="collapse">
+                                        <tr>
+                                              <td>
+                                                <span class="product-name">
+                                                    <div class="pretty p-default" id="pretty-scale-test">
+                                                        <input type="checkbox" />
+                                                        <div class="state p-primary">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                    Foley cather 2 way 6fr -suture india
+                                                  </span>
+                                                </td>
+                                                <td align="center">
+                                                    <input
+                                                    min="0"
+                                                      value="20"
+                                                      type="number"
+                                                      class="product-quantity"
+                                                    />
+                                                  </td>
+                                                  <td class="text-center">88.44</td>
+                                        </tr>
+                                        <tr>
+                                              <td>
+                                                <span class="product-name">
+                                                    <div class="pretty p-default" id="pretty-scale-test">
+                                                        <input type="checkbox" />
+                                                        <div class="state p-primary">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                    Foley cather 2 way 6fr -suture india
+                                                  </span>
+                                                </td>
+                                                <td align="center">
+                                                    <input
+                                                    min="0"
+                                                      value="20"
+                                                      type="number"
+                                                      class="product-quantity"
+                                                    />
+                                                  </td>
+                                                  <td class="text-center">88.44</td>
+                                        </tr>
+                                        <tr>
+                                              <td>
+                                                <span class="product-name">
+                                                    <div class="pretty p-default" id="pretty-scale-test">
+                                                        <input type="checkbox" />
+                                                        <div class="state p-primary">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                    Foley cather 2 way 6fr -suture india
+                                                  </span>
+                                                </td>
+                                                <td align="center">
+                                                    <input
+                                                    min="0"
+                                                      value="20"
+                                                      type="number"
+                                                      class="product-quantity"
+                                                    />
+                                                  </td>
+                                                  <td class="text-center">88.44</td>
+                                        </tr>
+                                        <tr>
+                                              <td>
+                                                <span class="product-name">
+                                                    <div class="pretty p-default" id="pretty-scale-test">
+                                                        <input type="checkbox" />
+                                                        <div class="state p-primary">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                    Foley cather 2 way 6fr -suture india
+                                                  </span>
+                                                </td>
+                                                <td align="center">
+                                                    <input
+                                                    min="0"
+                                                      value="20"
+                                                      type="number"
+                                                      class="product-quantity"
+                                                    />
+                                                  </td>
+                                                  <td class="text-center">88.44</td>
+                                        </tr>
+    
+                                      </tbody>
+                                    </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- <div class="row">
+                      <div class="col-xs-12">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="text-center">Select</th>
+                                <th>Product name</th>
+                                <th class="text-center">Quantity</th>
+                                <th class="text-center">Our Price (&#8377;)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              <tr>
+                                <td class="select-td" align="center">&nbsp;&nbsp;
+                                  <div class="pretty p-default" id="pretty-scale-test">
+                                      <input type="checkbox" />
+                                      <div class="state p-primary">
+                                          <label>&nbsp;</label>
+                                      </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <span class="product-name">
+                                    Foley cather 2 way 6fr -suture india
+                                  </span>
+                                  <p class="text-secondary">Suture India</p>
+                                </td>
+                                <td align="center">
+                                  <input
+                                  min="0"
+                                    value="20"
+                                    type="number"
+                                    class="product-quantity"
+                                  />
+                                </td>
+                                <td class="text-center">88.44</td>
+                              </tr>
+                              <tr>
+                                  <td class="select-td" align="center">&nbsp;&nbsp;
+                                      <div class="pretty p-default" id="pretty-scale-test">
+                                          <input type="checkbox" />
+                                          <div class="state p-primary">
+                                              <label>&nbsp;</label>
+                                          </div>
+                                      </div>
+                                    </td>
+                                <td>
+                                  <span class="product-name">
+                                    Foley cather 2 way 6fr -suture india
+                                  </span>
+                                  <p class="text-secondary">Suture India</p>
+                                </td>
+                                <td align="center">
+                                  <input
+                                    min="0"
+                                    value="20"
+                                    type="number"
+                                    class="product-quantity"
+                                  />
+                                </td>
+                                <td class="text-center">88.44</td>
+                              </tr>
+                              <tr>
+                                  <td class="select-td" align="center">&nbsp;&nbsp;
+                                      <div class="pretty p-default" id="pretty-scale-test">
+                                          <input type="checkbox" />
+                                          <div class="state p-primary">
+                                              <label>&nbsp;</label>
+                                          </div>
+                                      </div>
+                                    </td>
+                                <td>
+                                  <span class="product-name">
+                                    Foley cather 2 way 6fr -suture india
+                                  </span>
+                                  <p class="text-secondary">Suture India</p>
+                                </td>
+                                <td align="center">
+                                  <input
+                                    min="0"
+                                    value="20"
+                                    type="number"
+                                    class="product-quantity"
+                                  />
+                                </td>
+                                <td class="text-center">88.44</td>
+                              </tr>
+                              <tr>
+                                  <td class="select-td" align="center">&nbsp;&nbsp;
+                                      <div class="pretty p-default" id="pretty-scale-test">
+                                          <input type="checkbox" />
+                                          <div class="state p-primary">
+                                              <label>&nbsp;</label>
+                                          </div>
+                                      </div>
+                                    </td>
+                                <td>
+                                  <span class="product-name">
+                                    Foley cather 2 way 6fr -suture india
+                                  </span>
+                                  <p class="text-secondary">Suture India</p>
+                                </td>
+                                <td align="center">
+                                  <input
+                                    min="0"
+                                    value="20"
+                                    type="number"
+                                    class="product-quantity"
+                                  />
+                                </td>
+                                <td class="text-center">88.44</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="col-md-3 col-xs-12">
+                    <div class="quotations-box">
+                      <div class="download-file-tile">
+                        <i class="fas fa-file-download"></i>
+                        <span class="dowload-file-control">Download ViZi File<br />
+                          <a href="">Click here</a>
+                        </span>
+                      </div>
+                      <div class="text-secondary file-description ">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est et
+                        facilis in quod fugit architecto omnis
+                      </div>
+                      <div class="selected-products text-secondary">
+                        You have selected <strong class="text-primary" >03 Products</strong>
+                      </div>
+                      <a href="#" style="margin-top: 20px;" class="btn buttonA">request for quotations</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- </div> -->
+  </body>
+  <footer class="navbar-fixed-bottom">
+    <!-- THiS IS A FOOTER -->
+    <div class="container-fluid">
+      <div class="pull-left copyright">
+        &copy; 2018 <strong> medikabazaar</strong> All Rights Reserved.
+      </div>
+      <div class="pull-right">
+        <img src="images/app_store.png" class="mobile-app-icon" alt="" />
+        <img src="images/google_play.png" class="mobile-app-icon" alt="" />
+      </div>
+    </div>
+  </footer>
+</html>

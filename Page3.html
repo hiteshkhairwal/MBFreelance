@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dropzone.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./lib/bootstrap.js"
+    ></script>
+    <script src="lib/dropzone.js"></script>
+
+    <title>Upload Consumption Data</title>
+  </head>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid header-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" id="header-logo" alt="Image here" />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                My Account <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <!-- <form name="logout_form" action="app" method="post" > -->
+                  <!-- <input type="hidden" name="action" value="logout"> -->
+                  <!--
+                    <button class="link-button" type="submit">Log Out</button>
+                  -->
+                  <a href="#">Log Out</a>
+                  <!-- </form> -->
+                </li>
+              </ul>
+            </li>
+            <li><a href="howitworks.html">How it works?</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <body>
+    <!-- <div class="step-progress">
+      <div class="step-progress-box">
+        <div class="row">
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill done"> <i class="fas fa-check"></i> </span>
+              <span class="step-text"> Get Subscription </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill done"> <i class="fas fa-check"></i> </span>
+              <span class="step-text"> Terms & Conditions </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group active">
+              <span class="step-pill"> 3 </span>
+              <span class="step-text"> Upload Data </span>
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <span class="step-group">
+              <span class="step-pill"> 4 </span>
+              <span class="step-text"> Dashboard </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="step-container">
+      <div id="myCarousel" class="carousel slide" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="step-container">
+              <div class="step-container-head">
+                <h2 class="card-title">Select Period</h2>
+                <p class="card-title-subtext">
+                  Submit minimum previous
+                  <span style="color:#26396F">3 year's medical</span> consumption
+                  data. <br>More data more accurate projections!
+                </p>
+                <hr class="card-title-break" />
+              </div>
+              <div class="step-container-body">
+                <div class="datawidth-control">
+                  <div class="data_width">
+                    <div id="yearly_width" class="width_type active_width ">
+                      <i class="far fa-check-circle"></i> Yearly
+                    </div><div id="monthly_width" class="width_type">
+                      <i class="far fa-check-circle"></i> Monthly
+                    </div><div id="weekly_width" class="width_type">
+                      <i class="far fa-check-circle"></i> Weekly
+                    </div>
+                  </div>
+                  <div class="width-radio-group">
+                    <div class="radio">
+                      <label>
+                        <input
+                          type="radio"
+                          name="data_time"
+                          id="inputyear"
+                          value="year"
+                          checked="checked"
+                        />
+                        Year
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input
+                          type="radio"
+                          name="data_time"
+                          id="inputmonth"
+                          value="month"
+                        />
+                        Monthly
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input
+                          type="radio"
+                          name="data_time"
+                          id="inputweek"
+                          value="week"
+                        />
+                        Weekly
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="#myCarousel"
+                  data-slide="next"
+                  style="margin:0 auto; padding-left:70px;padding-right:70px;"
+                  class="btn buttonA"
+                  >Continue</a
+                >
+              </div>
+              <div class="step-container-footer text-center">
+                <strong class="text-secondary "> Note: </strong> Your data is safe
+                with us. It is stored on a secured server and will not be
+                used/accessible by any third party entities. <br />Please read our
+                <a href="#">privacy policy.</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="step-container">
+              <div class="step-container-head">
+                <h2 class="card-title">Upload Consumption Data</h2>
+                <p class="card-title-subtext">
+                  Submit minimum previous
+                  <span style="color:#26396F">3 year's medical</span> consumption
+                  data. <br>More data more accurate projections!
+                </p>
+                <hr class="card-title-break" />
+              </div>
+              <div class="step-container-body">
+                <div class="upload-control">
+                  <div class="upload-control-items">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    <span>
+                      <a href="#" id="open-upload" class="h3 text-primary">
+                        Click here to Download </a
+                      ><br />
+                      <span class="text-secondary">
+                        <strong>
+                          Medical Supplies Consumption File format
+                        </strong>
+                      </span>
+                    </span>
+                  </div>
+                  <!-- </div> -->
+                </div>
+                <a
+                  href="#myCarousel"
+                  data-slide="next"
+                  style="margin:0 auto; padding-left:70px;padding-right:70px;"
+                  class="btn buttonA"
+                  >Continue</a
+                >
+              </div>
+              <div class="step-container-footer text-center">
+                <strong class="text-secondary "> Note: </strong> Your data is safe
+                with us. It is stored on a secured server and will not be
+                used/accessible by any third party entities. <br />Please read our
+                <a href="#">privacy policy.</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="step-container">
+              <div class="step-container-head">
+                <h2 class="card-title">Upload Historic Consumption Data</h2>
+                <p class="card-title-subtext">
+                  Submit minimum previous
+                  <span style="color:#26396F">3 year's medical</span> consumption
+                  data. <br>More data more accurate projections!
+                </p>
+                <hr class="card-title-break" />
+              </div>
+              <div class="step-container-body">
+                <div class="file-upload-container-parent">
+                  <div class="file-upload-container-child">
+                    <div class="body">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                      <h4>Drag and drop to upload</h4>
+                      <p>or <a href="#">browse</a> to choose a file</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="Page4.html" id="continue-to-upload" class="btn buttonA"
+                  >Continue To upload</a
+                >
+                <!--
+                  <div class="row">
+                  <div class="col-xs-12">
+                -->
+                <!--
+                  <button class="btn buttonA">
+                      Continue to Upload
+                  </button>
+                -->
+                <!--
+                  </div>
+                  </div>
+                -->
+              </div>
+              <div class="step-container-footer text-center">
+                <strong class="text-secondary "> Note: </strong> First time users
+                please upload minimum 3 years data.Existing users can upload
+                current data in addition to earlier submitted data. Need
+                assistance in organizing your data? Call us at
+                <strong>+91 9707232323</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <script>
+      var checked = true;
+      function dataWidthChange(e) {
+        console.log(event);
+      }
+      $(document).ready(function() {
+        $("#yearly_width").click(function() {
+          $("#inputyear").click();
+          // $('#inputyear').click(function(){
+          console.log("changing to year");
+          $("#yearly_width").addClass("active_width");
+          $("#monthly_width").removeClass("active_width");
+          $("#weekly_width").removeClass("active_width");
+          // });
+        });
+        $("#monthly_width").click(function() {
+          $("#inputmonth").click();
+          // $('#inputmonth').change(function(){
+          console.log("changing to month");
+          $("#yearly_width").removeClass("active_width");
+          $("#monthly_width").addClass("active_width");
+          $("#weekly_width").removeClass("active_width");
+          // });
+        });
+        $("#weekly_width").click(function() {
+          $("#inputweek").click();
+          // $('#inputweek').change(function(){
+          console.log("changing to week");
+          $("#yearly_width").removeClass("active_width");
+          $("#monthly_width").removeClass("active_width");
+          $("#weekly_width").addClass("active_width");
+          // });
+        });
+      });
+    </script>
+  </body>
+  <footer class="navbar-fixed-bottom">
+    <!-- THiS IS A FOOTER -->
+    <div class="container-fluid">
+      <div class="pull-left copyright">
+        &copy; 2018 <strong> medikabazaar</strong> All Rights Reserved.
+      </div>
+      <div class="pull-right">
+        <img src="images/app_store.png" class="mobile-app-icon" alt="" />
+        <img src="images/google_play.png" class="mobile-app-icon" alt="" />
+      </div>
+    </div>
+  </footer>
+</html>
